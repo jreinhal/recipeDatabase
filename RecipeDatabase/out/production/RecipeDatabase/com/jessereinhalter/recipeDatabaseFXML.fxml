@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #F5F7F8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jessereinhalter.RecipeDatabaseController">
+   <left>
+      <HBox prefHeight="700.0" prefWidth="542.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="700.0" prefWidth="335.0">
+               <content>
+                  <VBox prefHeight="1220.0" prefWidth="312.0" style="-fx-background-color: #012A4F;">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="231.0" text="Recipe Database" textFill="WHITE" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Helvetica Neue" size="28.0" />
+                           </font>
+                        </Label>
+                        <Line endX="109.38970947265625" startX="-100.0" stroke="WHITE" style="-fx-fill: white;">
+                           <VBox.margin>
+                              <Insets left="5.0" top="2.0" />
+                           </VBox.margin>
+                        </Line>
+                        <Label prefHeight="19.0" prefWidth="188.0" text="Add a Recipe File" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Helvetica Neue" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="addRecipeFileBtn" mnemonicParsing="false" onAction="#locateFile" prefHeight="17.0" prefWidth="75.0" text="Add">
+                           <VBox.margin>
+                              <Insets left="5.0" top="2.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label prefHeight="19.0" prefWidth="188.0" text="Or" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Helvetica Neue" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="19.0" prefWidth="188.0" text="Choose a Cuisine " textFill="WHITE" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Helvetica Neue" size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="comboBox" prefHeight="27.0" prefWidth="150.0" promptText="Select Cuisine">
+                           <VBox.margin>
+                              <Insets left="5.0" top="2.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                        <VBox fx:id="ingredientVBox" prefHeight="464.0" prefWidth="307.0" visible="false">
+                           <children>
+                              <Label fx:id="addIngredientsLabel" prefHeight="64.0" prefWidth="305.0" text="Select from the Following Ingredients" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="Helvetica Neue" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="31.0" prefWidth="97.0" text="Red Meat" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica Neue" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="groundBeefCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Ground Beef" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="beefStirFryCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Beef Stir Fry" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="steakCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Steak" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="181.0" prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="venisonCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Venison" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="31.0" prefWidth="97.0" text="White Meat" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica Neue" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="chickenCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Chicken" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="porkChopsCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Pork Chops" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="groundPorkCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Ground Pork" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="233.0" prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="lambCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Lamb" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="31.0" prefWidth="97.0" text="Seafood" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica Neue" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="fishCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Fish" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="shrimpCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Shrimp" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="crabCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Crab" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="70.0" prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="10.0" layoutY="414.0" prefHeight="21.0" prefWidth="199.0" text="Vegan Meat Alternatives" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica Neue" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox layoutX="10.0" layoutY="435.0" prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="tofuCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Tofu" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="tempehCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Tempeh" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="10.0" layoutY="42.0" prefHeight="31.0" prefWidth="97.0" text="Grains" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica Neue" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox layoutX="10.0" layoutY="68.0" prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="whiteRiceCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="White Rice" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="brownRiceCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Brown Rice" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="farroCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Farro" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="174.0" prefHeight="34.0" prefWidth="322.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="cuscusCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Cuscus" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="freekehCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Freekeh" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="polentaCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="Polenta" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="10.0" layoutY="223.0" prefHeight="31.0" prefWidth="97.0" text="Legumes" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Helvetica Neue" size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox layoutX="10.0" layoutY="249.0" prefHeight="34.0" prefWidth="291.0" spacing="50.0">
+                                 <children>
+                                    <CheckBox fx:id="blackBeansCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Black Beans" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox fx:id="garbanzoCB" mnemonicParsing="false" prefHeight="18.0" prefWidth="230.0" text="Garbanzo" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-61.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="-60.0" top="-3.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="5.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <VBox fx:id="recipeNameVBox" prefHeight="681.0" prefWidth="211.0" style="-fx-background-color: #012A4F;" visible="false">
+               <children>
+                  <Label fx:id="recipeNamesLabel" prefHeight="52.0" prefWidth="199.0" text="Recipe Names" textFill="WHITE" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="5.0" top="13.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Helvetica Neue" size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="100.0" startX="-100.0" stroke="WHITE" strokeLineCap="ROUND">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </Line>
+                  <ListView fx:id="recipeListView" onMouseClicked="#listViewRecipeSelection" prefHeight="620.0" prefWidth="201.0" style="-fx-background-color: white;">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <HBox.margin>
+                  <Insets top="1.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="567.0" fitWidth="744.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView2" fitHeight="567.0" fitWidth="744.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

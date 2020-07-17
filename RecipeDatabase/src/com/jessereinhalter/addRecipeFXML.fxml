@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jessereinhalter.RecipeAddController">
+   <left>
+      <VBox prefHeight="547.0" prefWidth="233.0" style="-fx-background-color: #012A4F;" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" prefHeight="19.0" prefWidth="188.0" text="Add a Recipe File" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Helvetica Neue" size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane prefHeight="2.0" prefWidth="233.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <Label prefHeight="25.0" prefWidth="228.0" text="Add a Recipe Title Image" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Helvetica Neue" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="uploadImage1Btn" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="Add">
+               <VBox.margin>
+                  <Insets left="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Label prefHeight="45.0" prefWidth="224.0" text="Add a Recipe Instructions Image" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Helvetica Neue" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="uploadImage2Btn" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="Add">
+               <VBox.margin>
+                  <Insets left="5.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="547.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView1" fitHeight="247.0" fitWidth="363.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageView2" fitHeight="299.0" fitWidth="363.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
