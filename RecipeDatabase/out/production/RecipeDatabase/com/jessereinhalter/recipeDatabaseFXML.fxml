@@ -22,7 +22,7 @@
                <content>
                   <VBox prefHeight="1220.0" prefWidth="312.0" style="-fx-background-color: #012A4F;">
                      <children>
-                        <Label prefHeight="54.0" prefWidth="231.0" text="Recipe Database" textFill="WHITE" wrapText="true">
+                        <Label prefHeight="54.0" prefWidth="231.0" text="Recipe Retriever" textFill="WHITE" wrapText="true">
                            <VBox.margin>
                               <Insets left="5.0" top="10.0" />
                            </VBox.margin>

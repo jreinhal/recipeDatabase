@@ -12,7 +12,7 @@ public class Datasource {
 
     public static final String DB_NAME = "RecipeDatabase.db";
     public static final String SQCONN = "jdbc:sqlite:/Users/jessereinhalter/Library/" +
-            "Mobile Documents/com~apple~CloudDocs/School/Udemy/Java Course/RecipeDatabase/" + DB_NAME;
+            "Mobile Documents/com~apple~CloudDocs/School/Udemy/Java Course/recipeDatabase(Git)/RecipeDatabase/" + DB_NAME;
 
     // Recipes tables
     public static final String TABLE_RECIPES = "reipes";
